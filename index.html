@@ -316,9 +316,12 @@
   const timeInput = document.getElementById('round-trip-time');
   const today = new Date();
   const year = today.getFullYear(), month = today.getMonth() + 1, day = today.getDate();
+  const hour = today.getHours();
+  const minute = today.getMinutes();
+  const second = today.getSeconds();
   function pad(n) {
     return n < 10 ? '0' + n : n;
   }
-  timeInput.setAttribute('value', year + '-' + pad(month) + '-' + pad(day) + ' 00:00:00');
+  timeInput.setAttribute('value', year + '-' + pad(month) + '-' + pad(day) + ' ' +pad(hour) + ':' + pad(minute) + ':' + pad(second) );
 </script>
 </html>
